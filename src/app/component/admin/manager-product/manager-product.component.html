@@ -1,0 +1,18 @@
+<p>manager-product works!</p>
+<div class="container">
+    <table>
+        <thead>
+            <tr>
+                <th>stt</th>
+                <th>name</th>
+                <th>price</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr app-product-item *ngFor="let product of products; let i = index" [product]="product" [index]="i" (onRemove)="removeItem(product.id)">
+                
+            </tr>
+        </tbody>
+    </table>
+</div>
